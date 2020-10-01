@@ -58,7 +58,7 @@ namespace AddressBookProblem
         {
             return this.state;
         }
-        public void setSate(string state)
+        public void setState(string state)
         {
             this.state = state;
         }
