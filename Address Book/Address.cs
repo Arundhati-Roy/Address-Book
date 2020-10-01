@@ -99,6 +99,10 @@ namespace AddressBookProblem
             Console.WriteLine("Address : " + c.getAddress());
             Console.WriteLine("Phone Number : " + c.getPhone());
         }
+        public void deleteContact(Contact c)
+        {
+            aBook.Remove(c);
+        }
 
     }
 }
