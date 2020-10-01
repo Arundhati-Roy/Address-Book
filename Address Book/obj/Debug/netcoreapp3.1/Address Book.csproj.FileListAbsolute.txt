@@ -1,0 +1,13 @@
+C:\Users\priyadarshini roy\source\repos\Address Book\Address Book\bin\Debug\netcoreapp3.1\Address Book.exe
+C:\Users\priyadarshini roy\source\repos\Address Book\Address Book\bin\Debug\netcoreapp3.1\Address Book.deps.json
+C:\Users\priyadarshini roy\source\repos\Address Book\Address Book\bin\Debug\netcoreapp3.1\Address Book.runtimeconfig.json
+C:\Users\priyadarshini roy\source\repos\Address Book\Address Book\bin\Debug\netcoreapp3.1\Address Book.runtimeconfig.dev.json
+C:\Users\priyadarshini roy\source\repos\Address Book\Address Book\bin\Debug\netcoreapp3.1\Address Book.dll
+C:\Users\priyadarshini roy\source\repos\Address Book\Address Book\bin\Debug\netcoreapp3.1\Address Book.pdb
+C:\Users\priyadarshini roy\source\repos\Address Book\Address Book\obj\Debug\netcoreapp3.1\Address Book.csprojAssemblyReference.cache
+C:\Users\priyadarshini roy\source\repos\Address Book\Address Book\obj\Debug\netcoreapp3.1\Address Book.AssemblyInfoInputs.cache
+C:\Users\priyadarshini roy\source\repos\Address Book\Address Book\obj\Debug\netcoreapp3.1\Address Book.AssemblyInfo.cs
+C:\Users\priyadarshini roy\source\repos\Address Book\Address Book\obj\Debug\netcoreapp3.1\Address Book.csproj.CoreCompileInputs.cache
+C:\Users\priyadarshini roy\source\repos\Address Book\Address Book\obj\Debug\netcoreapp3.1\Address Book.dll
+C:\Users\priyadarshini roy\source\repos\Address Book\Address Book\obj\Debug\netcoreapp3.1\Address Book.pdb
+C:\Users\priyadarshini roy\source\repos\Address Book\Address Book\obj\Debug\netcoreapp3.1\Address Book.genruntimeconfig.cache
