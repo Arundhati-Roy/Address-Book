@@ -21,12 +21,24 @@ namespace AddressBookProblem
                         for (int i = 1; i <= n; i++)
                         {
                             Console.WriteLine("Enter the details of Contact " + i + " to be added sepetated by space");
-                            string alldata = Console.ReadLine();
-                            string[] sepData = alldata.Split(" ");
-                            Contact c1 = new Contact(sepData[0], sepData[1], sepData[2], sepData[3], sepData[4], long.Parse(sepData[5]));
+                            //string alldata = Console.ReadLine();
+                            //string[] sepData = alldata.Split(" ");
+                            Console.WriteLine("First Name: ");
+                            String fname = Console.ReadLine();
+                            Console.WriteLine("Last Name: ");
+                            String lname = Console.ReadLine();
+                            Console.WriteLine("City: ");
+                            String city = Console.ReadLine();
+                            Console.WriteLine("State: ");
+                            String state = Console.ReadLine();
+                            Console.WriteLine("Address: ");
+                            String addr = Console.ReadLine();
+                            Console.WriteLine("Phone no.: ");
+                            int phNo = Convert.ToInt32(Console.ReadLine());
+                            Contact c1 = new Contact(fname, lname, city, state, addr, phNo);
                             a.addContact(c1);
                         }
-                        Console.WriteLine("Contact successfully added...........Following are the details\n");
+                        Console.WriteLine("Contact successfully added. Following are the details\n");
                         a.displayAll();
                         break;
 
