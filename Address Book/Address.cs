@@ -22,12 +22,14 @@ namespace AddressBookProblem
             aBook.Add(c);
         }
 
-        public void displayAll()
+        public void displayAll(List<Contact> l)
         {
-            foreach (Contact c in aBook)
+            foreach (Contact c in l)
             {
                 displayContact(c);
+                Console.WriteLine("**************");
             }
+
         }
 
         public Contact SearchUsingName(string fname, string lname)
