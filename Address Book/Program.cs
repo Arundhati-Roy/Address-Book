@@ -105,6 +105,7 @@ namespace AddressBookProblem
             }
             md.displayAllAddressBook();
             MultiDict md2 = new MultiDict();
+            MultiDict md3 = new MultiDict();
             Console.WriteLine("Do you wanna search person by city or state?(1.Yes or 2.N0)");
             int k2 = Convert.ToInt32(Console.ReadLine());
             if (k2 == 1)
@@ -121,6 +122,7 @@ namespace AddressBookProblem
                         Console.WriteLine("Following are the details of contacts who belong to " + city);
                         a2.displayAll(l1);
                         md2.addSearchBook(city, a2.getAddBook());
+                        Console.WriteLine("Total contacts in city "+city+"are: "+md2.countContactInCity());
                     }
                     else
                     {
@@ -136,7 +138,8 @@ namespace AddressBookProblem
                     {
                         Console.WriteLine("Following are the details of contacts who belong to " + state);
                         a2.displayAll(l2);
-                        md2.addSearchBook(state, a2.getAddBook());
+                        md3.addSearchBook(state, a2.getAddBook());
+                        Console.WriteLine("Total contacts in state " + state + "are: " + md3.countContactInCity());
                     }
                     else
                     {
