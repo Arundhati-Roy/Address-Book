@@ -26,5 +26,27 @@ namespace AddressBookProblem
 
             }
         }
+        public List<Contact> searchByCity(string y)
+        {
+            foreach (KeyValuePair<string, List<Contact>> kvp in mdict)
+            {
+                //Console.WriteLine("Address Book Number = {0}", kvp.Key);
+                //Console.WriteLine("Address Book Contents are : ");
+                //a.displayAll(kvp.Value);
+                List<Contact> cl = null;
+                Contact cnew = null;
+                foreach (Contact c in kvp.Value)
+                {
+                    if (c.getCity().Equals(y))
+                    {
+                        cnew = c;
+                        cl.Add(cnew);
+                        break;
+                    }
+                }
+                return cl;
+            }
+            return null;
+        }
     }
 }

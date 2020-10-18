@@ -105,6 +105,18 @@ namespace AddressBookProblem
         {
             aBook.Remove(c);
         }
-
+        public Contact SearchUsingCity(string city)
+        {
+            Contact cnew = null;
+            foreach (Contact c in aBook)
+            {
+                if (c.getCity().Equals(city))
+                {
+                    cnew = c;
+                    break;
+                }
+            }
+            return cnew;
+        }
     }
 }

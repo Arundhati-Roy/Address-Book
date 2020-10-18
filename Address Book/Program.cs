@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace AddressBookProblem
 {
@@ -9,15 +10,17 @@ namespace AddressBookProblem
             MultiDict md = new MultiDict();
             Console.WriteLine("Hello, How many address books you want to create?");
             int no_ABooks = Convert.ToInt32(Console.ReadLine());
+            ABook a2 = new ABook();
             for (int j = 1; j <= no_ABooks; j++)
             {
-                Console.WriteLine("Enter the name of address book "+ j);
+                Console.WriteLine("Enter the name of address book " + j);
                 String name = Console.ReadLine();
                 ABook a = new ABook();
                 bool val = true;
                 while (val)
                 {
-                    Console.WriteLine("\nHello, Welcome to Address Book " + j + "\nChoose the operation you want to perform\n1.Add Contact\n2.Edit Contact\n3.Delete a contact from the list\n4.Exit");
+                    Console.WriteLine("\nHello, Welcome to Address Book " + j + "\nChoose the operation you want to perform\n" +
+                        "1.Add Contact" + "\n2.Edit Contact\n3.Delete a contact from the list\n4.Search by city\n5.Exit");
                     int k = Convert.ToInt32(Console.ReadLine());
 
                     switch (k)
@@ -27,7 +30,7 @@ namespace AddressBookProblem
                             int n = Convert.ToInt32(Console.ReadLine());
                             for (int i = 1; i <= n; i++)
                             {
-                                Console.WriteLine("Enter the details of Contact " + i + " to be added separated by space");
+                                Console.WriteLine("Enter the details of Contact " + i);
                                 //string alldata = Console.ReadLine();
                                 //string[] sepData = alldata.Split(" ");
                                 Console.WriteLine("First Name: ");
@@ -42,7 +45,7 @@ namespace AddressBookProblem
                                 String addr = Console.ReadLine();
                                 Console.WriteLine("Phone no.: ");
                                 int phNo = Convert.ToInt32(Console.ReadLine());
-                                Contact c1 = new Contact(fname, lname,city,state,addr,phNo);
+                                Contact c1 = new Contact(fname, lname, city, state, addr, phNo);
                                 a.addContact(c1);
                             }
                             Console.WriteLine("Contact successfully added...........Following are the details\n");
@@ -84,6 +87,12 @@ namespace AddressBookProblem
                             break;
 
                         case 4:
+                            Console.WriteLine("Enter city to search");
+                            string scity = Console.ReadLine();
+                            Contact cSearch = a.SearchUsingCity(scity);
+                            break;
+
+                        case 5:
                             val = false;
                             break;
 
@@ -95,6 +104,43 @@ namespace AddressBookProblem
                 md.addNewAddressBook(name, a.getAddBook());
             }
             md.displayAllAddressBook();
+            Console.WriteLine("Do you wanna search person by city or state?(1.Yes or 2.N0)");
+            int k2 = Convert.ToInt32(Console.ReadLine());
+            if (k2 == 1)
+            {
+                Console.WriteLine("Choose the criteria to search for \n1.City\t2.State");
+                int s = Convert.ToInt32(Console.ReadLine());
+                if (s == 1)
+                {
+                    Console.WriteLine("Enter the city name");
+                    string city = Console.ReadLine();
+                    List<Contact> l1 = md.searchByCity(city);
+                    if (l1 != null)
+                    {
+                        Console.WriteLine("Following are the details of contacts who belong to " + city);
+                        a2.displayAll(l1);
+                    }
+                    else
+                    {
+                        Console.WriteLine("No Person belongs to that city");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Enter the state name");
+                    string state = Console.ReadLine();
+                    List<Contact> l2 = md.searchByState(state);
+                    if (l2 != null)
+                    {
+                        Console.WriteLine("Following are the details of contacts who belong to " + state);
+                        a2.displayAll(l2);
+                    }
+                    else
+                    {
+                        Console.WriteLine("No Person belongs to that state");
+                    }
+                }
+            }
         }
     }
 }
