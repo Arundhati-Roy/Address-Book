@@ -105,6 +105,17 @@ namespace AddressBookProblem
         {
             aBook.Remove(c);
         }
-
+        public bool CheckForDuplicate(Contact c1)
+        {
+            bool val = true;
+            foreach (Contact c in aBook)
+            {
+                if (c1.Equals(c))
+                {
+                    val = false;
+                }
+            }
+            return val;
+        }
     }
 }

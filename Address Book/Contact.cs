@@ -72,6 +72,15 @@ namespace AddressBookProblem
             this.pNumber = pno;
         }
 
+        public override bool Equals(object c)
+        {
+            if (c == null || (GetType() != c.GetType()))
+            {
+                return false;
+            }
+            Contact c2 = (Contact)c;
 
+            return (fName == c2.getFirstName()) && (lName == c2.getLastName());
+        }
     }
 }

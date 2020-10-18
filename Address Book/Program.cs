@@ -27,7 +27,7 @@ namespace AddressBookProblem
                             int n = Convert.ToInt32(Console.ReadLine());
                             for (int i = 1; i <= n; i++)
                             {
-                                Console.WriteLine("Enter the details of Contact " + i + " to be added separated by space");
+                                Console.WriteLine("Enter the details of Contact " + i);
                                 //string alldata = Console.ReadLine();
                                 //string[] sepData = alldata.Split(" ");
                                 Console.WriteLine("First Name: ");
@@ -43,7 +43,15 @@ namespace AddressBookProblem
                                 Console.WriteLine("Phone no.: ");
                                 int phNo = Convert.ToInt32(Console.ReadLine());
                                 Contact c1 = new Contact(fname, lname,city,state,addr,phNo);
-                                a.addContact(c1);
+                                bool dupCheck = a.CheckForDuplicate(c1);
+                                if (dupCheck)
+                                {
+                                    a.addContact(c1);
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Cannot add Contact as Contact with same name already exists");
+                                }
                             }
                             Console.WriteLine("Contact successfully added...........Following are the details\n");
                             a.displayAll(a.getAddBook());
