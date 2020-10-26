@@ -1,122 +1,203 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 
-namespace AddressBookProblem
+namespace AddressBook
 {
-    class ABook
+    class AddressBook
     {
-        List<Contact> aBook = new List<Contact>();
+        private List<Class1> list = new List<Class1>();
+        private Dictionary<string, Class1> d = new Dictionary<string, Class1>();
+        private Dictionary<string, Class1> cityDictionary = new Dictionary<string, Class1>();
+        private Dictionary<string, Class1> stateDictionary = new Dictionary<string, Class1>();
 
-        public void setAddBook(List<Contact> addBook)
+        public List<Class1> GetList()
         {
-            this.aBook = addBook;
+            return list;
         }
-        public List<Contact> getAddBook()
+        public Dictionary<string, Class1> GetDictionary()
         {
-            return aBook;
+            return d;
         }
+        public void AddAddress(string kname, Class1 c)
+        {
+            list.Add(c);
+            d.Add(kname, c);
 
-        public void addContact(Contact c)
-        {
-            aBook.Add(c);
         }
-
-        public void displayAll(List<Contact> l)
+        public Class1 ViewByKeyName(string kname)
         {
-            foreach (Contact c in l)
+
+            foreach (KeyValuePair<string, Class1> kvp in d)
             {
-                displayContact(c);
-                Console.WriteLine("**************");
+                if (kvp.Key == kname)
+                    return kvp.Value;
             }
-
+            return null;
         }
-
-        public Contact SearchUsingName(string fname, string lname)
+        public List<Class1> ViewAddressBook()
         {
-            Contact cnew = null;
-            foreach (Contact c in aBook)
+            SortByName();
+            return list;
+        }
+        public void EditNumber(String ename, String newnumber)
+        {
+            Boolean flag = false;
+            foreach (Class1 cc in list)
             {
-                if (c.getFirstName().Equals(fname) && c.getLastName().Equals(lname))
+                if (cc.GetName().Equals(ename))
                 {
-                    cnew = c;
+                    flag = true;
+                    cc.SetPhoneNo(newnumber);
+                    Console.WriteLine("Number edited successfully");
                     break;
                 }
             }
-            return cnew;
-        }
-
-        public Contact editContact(Contact c, int k)
-        {
-            switch (k)
+            if (!flag)
             {
-                case 1:
-                    Console.WriteLine("Enter the new First name");
-                    string fname = Console.ReadLine();
-                    c.setFirstName(fname);
-                    break;
-
-                case 2:
-                    Console.WriteLine("Enter the new Last name");
-                    string lname = Console.ReadLine();
-                    c.setLastName(lname);
-                    break;
-
-                case 3:
-                    Console.WriteLine("Enter the new City");
-                    string city = Console.ReadLine();
-                    c.setCity(city);
-                    break;
-
-                case 4:
-                    Console.WriteLine("Enter the new State");
-                    string state = Console.ReadLine();
-                    c.setState(state);
-                    break;
-
-                case 5:
-                    Console.WriteLine("Enter the new Address");
-                    string add = Console.ReadLine();
-                    c.setAddress(add);
-                    break;
-
-                case 6:
-                    Console.WriteLine("Enter the new phone number");
-                    long pNum = long.Parse(Console.ReadLine());
-                    c.setPhone(pNum);
-                    break;
-
-                default: break;
+                Console.WriteLine("No such name found!!!");
             }
 
-            return (c);
-        }
 
-        public void displayContact(Contact c)
-        {
-            Console.WriteLine("First Name : " + c.getFirstName());
-            Console.WriteLine("Last Name : " + c.getLastName());
-            Console.WriteLine("City : " + c.getCity());
-            Console.WriteLine("State : " + c.getState());
-            Console.WriteLine("Address : " + c.getAddress());
-            Console.WriteLine("Phone Number : " + c.getPhone());
         }
-        public void deleteContact(Contact c)
+        public void RemoveContact(String rname)
         {
-            aBook.Remove(c);
-        }
-        public Contact SearchUsingCity(string city)
-        {
-            Contact cnew = null;
-            foreach (Contact c in aBook)
+            Boolean flag = false;
+            foreach (Class1 cc in list)
             {
-                if (c.getCity().Equals(city))
+                if (cc.GetName().Equals(rname))
                 {
-                    cnew = c;
+                    flag = true;
+                    list.Remove(cc);
+                    Console.WriteLine("Number removed successfully");
                     break;
                 }
             }
-            return cnew;
+            if (!flag)
+            {
+                Console.WriteLine("No such name found!!!");
+            }
         }
+        public bool UC7_CheckForDuplicateEntry(string name)
+        {
+            foreach (Class1 c in list)
+            {
+                if (c.GetName().Equals(name))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+
+
+        public List<Class1> UC8_SearchPeopleByCityOrState(string location)
+        {
+
+
+            foreach (Class1 c in list)
+            {
+                cityDictionary.Add(c.GetCity(), c);
+
+            }
+            foreach (Class1 c in list)
+            {
+                stateDictionary.Add(c.GetState(), c);
+
+            }
+
+            List<Class1> listofpeople = new List<Class1>();
+            foreach (KeyValuePair<string, Class1> kvp in cityDictionary)
+            {
+                if (kvp.Key.Equals(location))
+                {
+                    listofpeople.Add(kvp.Value);
+                }
+            }
+            foreach (KeyValuePair<string, Class1> kvp in stateDictionary)
+            {
+                if (kvp.Key.Equals(location))
+                {
+                    listofpeople.Add(kvp.Value);
+                }
+            }
+            return listofpeople;
+        }
+        public void AddressByCity()
+        {
+            HashSet<string> citySet = new HashSet<string>();
+            foreach (Class1 c in list)
+            {
+
+                citySet.Add(c.GetCity());
+            }
+            foreach (string s in citySet)
+            {
+                int count = 0;
+                foreach (Class1 c in list)
+                {
+                    if (c.GetCity().Equals(s))
+                    {
+                        count++;
+                    }
+                }
+                Console.WriteLine("There are " + count + " contacts with address " + s);
+                Console.WriteLine();
+                foreach (Class1 cc in list)
+                {
+
+                    if (cc.GetCity().Equals(s))
+                        Console.WriteLine("Name : " + cc.GetName() + "  Address : " + cc.GetAddress() + "  ZIP : " + cc.GetZip() + "  Contact No : " + cc.GetPhoneNo() + "  EmailID : " + cc.GetEmail());
+
+                }
+                Console.WriteLine();
+                Console.WriteLine();
+            }
+        }
+
+        public void AddressByState()
+        {
+            HashSet<string> stateSet = new HashSet<string>();
+            foreach (Class1 c in list)
+            {
+
+                stateSet.Add(c.GetState());
+            }
+            foreach (string s in stateSet)
+            {
+                int count = 0;
+                foreach (Class1 c in list)
+                {
+                    if (c.GetState().Equals(s))
+                    {
+                        count++;
+                    }
+                }
+                Console.WriteLine("There are " + count + " contacts with address " + s);
+                Console.WriteLine();
+                foreach (Class1 cc in list)
+                {
+
+                    if (cc.GetState().Equals(s))
+                        Console.WriteLine("Name : " + cc.GetName() + "  Address : " + cc.GetAddress() + "  ZIP : " + cc.GetZip() + "  Contact No : " + cc.GetPhoneNo() + "  EmailID : " + cc.GetEmail());
+
+                }
+                Console.WriteLine();
+                Console.WriteLine();
+            }
+
+        }
+        public void SortByName()
+        {
+            list = list.OrderBy(c => c.GetName()).ToList();
+
+        }
+
+
+
     }
 }

@@ -2,76 +2,59 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace AddressBookProblem
+namespace AddressBook
 {
-    class Contact
+    class Class1
     {
-        protected string fName, lName, city, state, address;
-        protected long pNumber;
+        private string name;
+        private string address;
+        private string city;
+        private string state;
+        private string zip;
+        private string phoneNo;
+        private string email;
 
-        public Contact(string fName, string lName, string city, string state, string address, long pNumber)
+        public Class1(string name, string address, string city, string state, string zip, string phoneNo, string email)
         {
-            this.fName = fName;
-            this.lName = lName;
-            this.city = city;
-            this.state = state;
+            this.name = name;
             this.address = address;
-            this.pNumber = pNumber;
-        }
-
-        public string getFirstName()
-        {
-            return this.fName;
-        }
-        public void setFirstName(string fName)
-        {
-            this.fName = fName;
-        }
-
-        public string getLastName()
-        {
-            return this.lName;
-        }
-        public void setLastName(string lName)
-        {
-            this.lName = lName;
-        }
-
-        public string getAddress()
-        {
-            return this.address;
-        }
-        public void setAddress(string add)
-        {
-            this.address = add;
-        }
-
-        public string getCity()
-        {
-            return this.city;
-        }
-        public void setCity(string city)
-        {
             this.city = city;
-        }
-        public string getState()
-        {
-            return this.state;
-        }
-        public void setState(string state)
-        {
             this.state = state;
+            this.zip = zip;
+            this.phoneNo = phoneNo;
+            this.email = email;
         }
-
-        public long getPhone()
+        public String GetName()
         {
-            return this.pNumber;
+            return name;
         }
-        public void setPhone(long pno)
+        public String GetAddress()
         {
-            this.pNumber = pno;
+            return address;
         }
-
-
+        public String GetCity()
+        {
+            return city;
+        }
+        public String GetState()
+        {
+            return state;
+        }
+        public String GetZip()
+        {
+            return zip;
+        }
+        public String GetPhoneNo()
+        {
+            return phoneNo;
+        }
+        public void SetPhoneNo(String phoneNo)
+        {
+            this.phoneNo = phoneNo;
+        }
+        public String GetEmail()
+        {
+            return email;
+        }
     }
 }
