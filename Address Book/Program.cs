@@ -100,7 +100,15 @@ namespace AddressBookProblem
                                 }
                                 
                                 Contact c1 = new Contact(fname, lname, city, state, addr, phNo);
-                                a.addContact(c1);
+                                bool dupCheck = a.CheckForDuplicate(c1);
+                                if (dupCheck)
+                                {
+                                    a.addContact(c1);
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Cannot add Contact as Contact with same name already exists");
+                                }
                             }
                             Console.WriteLine("Contact successfully added...........Following are the details\n");
                             a.SortByCity();
@@ -159,6 +167,7 @@ namespace AddressBookProblem
                 md.addNewAddressBook(name, a.getAddBook());
             }
             md.displayAllAddressBook();
+            md.writeAllAddressBook();
             Console.WriteLine("View by city or state?? 1.Yes\t 2.No");
             int k2 = Convert.ToInt32(Console.ReadLine());
             if (k2 == 1)

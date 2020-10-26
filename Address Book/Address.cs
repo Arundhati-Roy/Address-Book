@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 
@@ -46,6 +47,17 @@ namespace AddressBookProblem
             {
                 displayContact(c);
                 Console.WriteLine("**************");
+                
+            }
+
+        }
+        public void writeAll(List<Contact> l)
+        {
+            foreach (Contact c in l)
+            {
+                writeContact(c);
+                Console.WriteLine("**************");
+
             }
 
         }
@@ -118,6 +130,15 @@ namespace AddressBookProblem
             Console.WriteLine("State : " + c.getState());
             Console.WriteLine("Address : " + c.getAddress());
             Console.WriteLine("Phone Number : " + c.getPhone());
+            
+        }
+        public void writeContact(Contact c)
+        {
+            string path = @"C:\Users\priyadarshini roy\source\repos\Address Book\Address Book\ContactsFile.txt";
+            string text = "First Name : " + c.getFirstName() + " Last Name : " + c.getLastName() + "  Address : " + c.getAddress() + "  City : " + c.getCity() + "  State : " + c.getState() + "  Contact No. : " + c.getPhone() + "\n";
+
+            File.AppendAllText(path, text);
+            Console.WriteLine("Written into file");
         }
         public void deleteContact(Contact c)
         {

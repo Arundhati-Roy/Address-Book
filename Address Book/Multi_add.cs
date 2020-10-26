@@ -1,5 +1,8 @@
-﻿using System;
+﻿using CsvHelper;
+using System;
 using System.Collections.Generic;
+using System.Globalization;
+using System.IO;
 using System.Text;
 
 namespace AddressBookProblem
@@ -25,6 +28,18 @@ namespace AddressBookProblem
                 a.displayAll(kvp.Value);
 
             }
+
+        }
+        public void writeAllAddressBook()
+        {
+            foreach (KeyValuePair<string, List<Contact>> kvp in mdict)
+            {
+                Console.WriteLine("Address Book Number = {0}", kvp.Key);
+                Console.WriteLine("Address Book Contents are : ");
+                a.writeAll(kvp.Value);
+
+            }
+
         }
         public List<Contact> searchByCity(string y)
         {
