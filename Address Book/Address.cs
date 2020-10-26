@@ -38,10 +38,30 @@ namespace AddressBook
             }
             return null;
         }
-        public List<Class1> ViewAddressBook()
+        public List<Class1> ViewAddressBook(int input)
         {
-            SortByName();
+            if (input == 1)
+            {
+                list = list.OrderBy(c => c.GetName()).ToList();
+
+            }
+            else if (input == 1)
+            {
+
+                list = list.OrderBy(c => c.GetCity()).ToList();
+
+            }
+            else if (input == 3)
+            {
+                list = list.OrderBy(c => c.GetState()).ToList();
+
+            }
+            else
+            {
+                list = list.OrderBy(c => c.GetZip()).ToList();
+            }
             return list;
+
         }
         public void EditNumber(String ename, String newnumber)
         {
@@ -129,6 +149,7 @@ namespace AddressBook
         }
         public void AddressByCity()
         {
+
             HashSet<string> citySet = new HashSet<string>();
             foreach (Class1 c in list)
             {
@@ -191,11 +212,7 @@ namespace AddressBook
             }
 
         }
-        public void SortByName()
-        {
-            list = list.OrderBy(c => c.GetName()).ToList();
 
-        }
 
 
 
