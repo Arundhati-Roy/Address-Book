@@ -6,10 +6,9 @@ namespace AddressBookProblem
 {
     class Contact
     {
-        protected string fName, lName, city, state, address;
-        protected long pNumber;
+        protected string fName, lName, city, state, address, pNumber;
 
-        public Contact(string fName, string lName, string city, string state, string address, long pNumber)
+        public Contact(string fName, string lName, string city, string state, string address, string pNumber)
         {
             this.fName = fName;
             this.lName = lName;
@@ -63,11 +62,11 @@ namespace AddressBookProblem
             this.state = state;
         }
 
-        public long getPhone()
+        public string getPhone()
         {
             return this.pNumber;
         }
-        public void setPhone(long pno)
+        public void setPhone(string pno)
         {
             this.pNumber = pno;
         }

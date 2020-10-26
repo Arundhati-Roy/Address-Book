@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace AddressBookProblem
@@ -21,7 +22,24 @@ namespace AddressBookProblem
         {
             aBook.Add(c);
         }
+        public void SortByName()
+        {
+            List<Contact> list = this.aBook;
+            list.OrderBy(aBook => aBook.getFirstName()).ToList();
 
+        }
+        public void SortByCity()
+        {
+            List<Contact> list = this.aBook;
+            list.OrderBy(aBook => aBook.getCity()).ToList();
+
+        }
+        public void SortByState()
+        {
+            List<Contact> list = this.aBook;
+            list.OrderBy(aBook => aBook.getState()).ToList();
+
+        }
         public void displayAll(List<Contact> l)
         {
             foreach (Contact c in l)
@@ -82,7 +100,7 @@ namespace AddressBookProblem
 
                 case 6:
                     Console.WriteLine("Enter the new phone number");
-                    long pNum = long.Parse(Console.ReadLine());
+                    string pNum = Console.ReadLine();
                     c.setPhone(pNum);
                     break;
 
@@ -121,7 +139,7 @@ namespace AddressBookProblem
         public Contact SearchUsingCity(string city)
         {
             Contact cnew = null;
-            foreach (Contact c in aBook)
+            foreach (Contact c in this.aBook)
             {
                 if (c.getCity().Equals(city))
                 {

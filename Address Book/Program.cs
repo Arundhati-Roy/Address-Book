@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 
 namespace AddressBookProblem
 {
@@ -21,7 +22,7 @@ namespace AddressBookProblem
                 bool val = true;
                 while (val)
                 {
-                    Console.WriteLine("\nHello, Welcome to Address Book " + j + "\nChoose the operation you want to perform\n" +
+                    Console.WriteLine("\nHello, Welcome to Address Book " + name + "\nChoose the operation you want to perform\n" +
                         "1.Add Contact" + "\n2.Edit Contact\n3.Delete a contact from the list\n4.Search by city\n5.Exit");
                     int k = Convert.ToInt32(Console.ReadLine());
 
@@ -33,24 +34,76 @@ namespace AddressBookProblem
                             for (int i = 1; i <= n; i++)
                             {
                                 Console.WriteLine("Enter the details of Contact " + i);
-                                //string alldata = Console.ReadLine();
-                                //string[] sepData = alldata.Split(" ");
-                                Console.WriteLine("First Name: ");
+                                Console.WriteLine("Enter First Name : ");
                                 String fname = Console.ReadLine();
-                                Console.WriteLine("Last Name: ");
+                                Regex reg4 = new Regex(@"(^[a-z A-Z]*$)");
+                                while (!reg4.IsMatch(fname))
+                                {
+                                    Console.WriteLine("Enter a valid name : ");
+                                    name = Console.ReadLine();
+                                }
+                                Console.WriteLine("Enter Last Name : ");
                                 String lname = Console.ReadLine();
-                                Console.WriteLine("City: ");
-                                String city = Console.ReadLine();
-                                Console.WriteLine("State: ");
-                                String state = Console.ReadLine();
-                                Console.WriteLine("Address: ");
+                                Regex regex1 = new Regex(@"(^[a-z A-Z]*$)");
+                                while (!regex1.IsMatch(lname))
+                                {
+                                    Console.WriteLine("Enter a valid name : ");
+                                    name = Console.ReadLine();
+                                }
+                                Console.WriteLine("Enter your address : ");
                                 String addr = Console.ReadLine();
-                                Console.WriteLine("Phone no.: ");
-                                int phNo = Convert.ToInt32(Console.ReadLine());
+                                Regex reg5 = new Regex(@"(^[a-z A-Z]*$)");
+                                while (!reg5.IsMatch(addr))
+                                {
+                                    Console.WriteLine("Enter a valid address : ");
+                                    addr = Console.ReadLine();
+                                }
+                                Console.WriteLine("Enter your city : ");
+                                String city = Console.ReadLine();
+                                Regex reg6 = new Regex(@"(^[a-z A-Z]*$)");
+                                while (!reg6.IsMatch(city))
+                                {
+                                    Console.WriteLine("Enter a valid city name : ");
+                                    city = Console.ReadLine();
+                                }
+                                Console.WriteLine("Enter your state : ");
+                                String state = Console.ReadLine();
+                                Regex reg7 = new Regex(@"(^[a-z A-Z]*$)");
+                                while (!reg7.IsMatch(state))
+                                {
+                                    Console.WriteLine("Enter a valid state name : ");
+                                    state = Console.ReadLine();
+                                }
+                                Console.WriteLine("Enter your zip : ");
+                                String zip = Console.ReadLine();
+                                Regex reg = new Regex(@"(^[0-9]{6}$)");
+                                while (!reg.IsMatch(zip))
+                                {
+                                    Console.WriteLine("Enter a valid zip code : ");
+                                    zip = Console.ReadLine();
+                                }
+                                Console.WriteLine("Enter your contact no. : ");
+                                String phNo = Console.ReadLine();
+                                Regex reg1 = new Regex(@"(^[7-9]{1}[0-9]{9}$)");
+                                while (!reg1.IsMatch(phNo))
+                                {
+                                    Console.WriteLine("Enter a a valid mobile number : ");
+                                    phNo = Console.ReadLine();
+                                }
+                                Console.WriteLine("Enter your email : ");
+                                String mailID = Console.ReadLine();
+                                Regex reg2 = new Regex("^[\\w-\\+]+(\\.[\\w]+)*@[\\w-]+(\\.[\\w]+)*(\\.[a-z]{2,})$");
+                                while (!reg2.IsMatch(mailID))
+                                {
+                                    Console.WriteLine("Enter a a valid emailID : ");
+                                    mailID = Console.ReadLine();
+                                }
+                                
                                 Contact c1 = new Contact(fname, lname, city, state, addr, phNo);
                                 a.addContact(c1);
                             }
                             Console.WriteLine("Contact successfully added...........Following are the details\n");
+                            a.SortByName();
                             a.displayAll(a.getAddBook());
                             break;
 
