@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ARE8UgQk9CZuvJR4QTZ0uAMs8e6yqWzVrhMUmW1j8dkLI2OtRLh3fYAam9CgGjfmgLVBoGxBtaS7RvqNWlYFQQ==",
+  "dgSpecHash": "7iFMDMoSzLeWpKm78aQWJgxyuqOq+ddopJD2zUaw+ExC8rNUCs6M6FiRSsLc20Btg37Xw9arwmu5Mzyl+hMrJg==",
   "success": true,
   "projectFilePath": "C:\\Users\\priyadarshini roy\\source\\repos\\Address Book\\Address Book\\Address Book.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "C:\\Users\\priyadarshini roy\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\priyadarshini roy\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\priyadarshini roy\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
+    "C:\\Users\\priyadarshini roy\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\priyadarshini roy\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
     "C:\\Users\\priyadarshini roy\\.nuget\\packages\\system.runtime\\4.3.0\\system.runtime.4.3.0.nupkg.sha512"
   ],

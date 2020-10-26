@@ -1,5 +1,8 @@
-﻿using System;
+﻿using CsvHelper;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -57,6 +60,7 @@ namespace AddressBookProblem
             {
                 writeContact(c);
                 writeContactInCSV(c);
+                writeContactInJson();
                 Console.WriteLine("**************");
 
             }
@@ -147,6 +151,37 @@ namespace AddressBookProblem
             string csv = string.Format("{0},{1},{2},{3},{4},{5}\n", c.getFirstName(), c.getLastName() , c.getAddress() , c.getCity(), c.getState(), c.getPhone() );
             File.AppendAllText(path, csv);
             Console.WriteLine("Written into Excel");
+        }
+        public void writeContactInJson()
+        {
+            string impfp = @"C:\Users\priyadarshini roy\source\repos\Address Book\Address Book\ContactsCSV.csv";
+            string expfp = @"C:\Users\priyadarshini roy\source\repos\Address Book\Address Book\ContactsJson.json";
+            //reading csv
+            using (var reader = new StreamReader(impfp))
+            using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
+            {
+                var records = csv.GetRecords<Contact>().ToList();
+                Console.WriteLine("Read data successfully");
+                foreach (Contact ad in records)
+                {
+                    Console.Write("\t" + ad.getFirstName());
+                    Console.Write("\t" + ad.getLastName());
+                    Console.Write("\t" + ad.getCity());
+                    Console.Write("\t" + ad.getState());
+                    Console.Write("\t" + ad.getAddress());
+                    Console.Write("\t" + ad.getPhone());
+                }
+
+                //writing into json
+                JsonSerializer ser = new JsonSerializer();
+                using (StreamWriter sw = new StreamWriter(expfp))
+                using (JsonWriter jw = new JsonTextWriter(sw))
+                {
+                    ser.Serialize(jw, records);
+                }
+                Console.WriteLine("\nWritten into json file");
+
+            }
         }
         public void deleteContact(Contact c)
         {
