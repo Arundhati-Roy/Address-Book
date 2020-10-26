@@ -103,7 +103,7 @@ namespace AddressBookProblem
                                 a.addContact(c1);
                             }
                             Console.WriteLine("Contact successfully added...........Following are the details\n");
-                            a.SortByName();
+                            a.SortByCity();
                             a.displayAll(a.getAddBook());
                             break;
 
