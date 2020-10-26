@@ -30,9 +30,6 @@ namespace AddressBookProblem
         {
             foreach (KeyValuePair<string, List<Contact>> kvp in mdict)
             {
-                //Console.WriteLine("Address Book Number = {0}", kvp.Key);
-                //Console.WriteLine("Address Book Contents are : ");
-                //a.displayAll(kvp.Value);
                 List<Contact> cl = null;
                 Contact cnew = null;
                 foreach (Contact c in kvp.Value)
@@ -47,6 +44,36 @@ namespace AddressBookProblem
                 return cl;
             }
             return null;
+        }
+
+        internal void addSearchBook(string city, List<Contact> lists)
+        {
+            mdict.Add(city, lists);
+        }
+
+        internal List<Contact> searchByState(string y)
+        {
+            foreach (KeyValuePair<string, List<Contact>> kvp in mdict)
+            {
+                List<Contact> cl = null;
+                Contact cnew = null;
+                foreach (Contact c in kvp.Value)
+                {
+                    if (c.getState().Equals(y))
+                    {
+                        cnew = c;
+                        cl.Add(cnew);
+                        break;
+                    }
+                }
+                return cl;
+            }
+            return null;
+        }
+
+        internal int countContactInCity()
+        {
+            return mdict.Keys.Count;
         }
     }
 }
