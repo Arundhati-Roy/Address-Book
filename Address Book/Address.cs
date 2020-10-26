@@ -56,6 +56,7 @@ namespace AddressBookProblem
             foreach (Contact c in l)
             {
                 writeContact(c);
+                writeContactInCSV(c);
                 Console.WriteLine("**************");
 
             }
@@ -139,6 +140,13 @@ namespace AddressBookProblem
 
             File.AppendAllText(path, text);
             Console.WriteLine("Written into file");
+        }
+        public void writeContactInCSV(Contact c)
+        {
+            string path = @"C:\Users\priyadarshini roy\source\repos\Address Book\Address Book\ContactsCSV.csv";
+            string csv = string.Format("{0},{1},{2},{3},{4},{5}\n", c.getFirstName(), c.getLastName() , c.getAddress() , c.getCity(), c.getState(), c.getPhone() );
+            File.AppendAllText(path, csv);
+            Console.WriteLine("Written into Excel");
         }
         public void deleteContact(Contact c)
         {
