@@ -74,14 +74,7 @@ namespace AddressBookProblem
                                     Console.WriteLine("Enter a valid state name : ");
                                     state = Console.ReadLine();
                                 }
-                                Console.WriteLine("Enter your zip : ");
-                                String zip = Console.ReadLine();
-                                Regex reg = new Regex(@"(^[0-9]{6}$)");
-                                while (!reg.IsMatch(zip))
-                                {
-                                    Console.WriteLine("Enter a valid zip code : ");
-                                    zip = Console.ReadLine();
-                                }
+                                
                                 Console.WriteLine("Enter your contact no. : ");
                                 String phNo = Console.ReadLine();
                                 Regex reg1 = new Regex(@"(^[7-9]{1}[0-9]{9}$)");
@@ -90,14 +83,7 @@ namespace AddressBookProblem
                                     Console.WriteLine("Enter a a valid mobile number : ");
                                     phNo = Console.ReadLine();
                                 }
-                                Console.WriteLine("Enter your email : ");
-                                String mailID = Console.ReadLine();
-                                Regex reg2 = new Regex("^[\\w-\\+]+(\\.[\\w]+)*@[\\w-]+(\\.[\\w]+)*(\\.[a-z]{2,})$");
-                                while (!reg2.IsMatch(mailID))
-                                {
-                                    Console.WriteLine("Enter a a valid emailID : ");
-                                    mailID = Console.ReadLine();
-                                }
+                                
                                 
                                 Contact c1 = new Contact(fname, lname, city, state, addr, phNo);
                                 bool dupCheck = a.CheckForDuplicate(c1);
