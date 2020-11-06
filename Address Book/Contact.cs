@@ -8,6 +8,9 @@ namespace AddressBookProblem
     {
         public string fName, lName, city, state, address, pNumber;
 
+        public Contact()
+        { 
+        }
         public Contact(string fName, string lName, string city, string state, string address, string pNumber)
         {
             this.fName = fName;

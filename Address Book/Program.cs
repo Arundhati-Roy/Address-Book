@@ -212,7 +212,6 @@ namespace AddressBookProblem
 
         }
 
-
         public static List<Contact> searchedContactDictionaryCity(string city)
         {
             List<Contact> l2 = new List<Contact>();
