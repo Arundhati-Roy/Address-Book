@@ -17,10 +17,10 @@ namespace UnitTestProject1
             AddRepo addRepo = new AddRepo();
 
             //Act
-            string type = addRepo.UpdateAddBook("Acquaintance","a");
+            string type = addRepo.UpdateAddBook("Acquaintance", "a");
 
             //Arrange
-            Assert.AreEqual("Acquaintance",type);
+            Assert.AreEqual("Acquaintance", type);
         }
 
         /// <summary>
@@ -34,7 +34,7 @@ namespace UnitTestProject1
 
             //Act
             DateTime sd = DateTime.Now;
-            addRepo.AddToContact_CheckTypeFromAddressDict("Abhimanyu","Roy","635876987","Colleagues");
+            addRepo.AddToContact_CheckTypeFromAddressDict("Abhimanyu", "Roy", "635876987", "Colleagues");
             addRepo.AddToContact_CheckTypeFromAddressDict("Samay", "Raina", "84776987", "Friend");
             addRepo.AddToContact_CheckTypeFromAddressDict("Neha", "Roy", "9845976987", "Family");
             addRepo.AddToContact_CheckTypeFromAddressDict("Jeet", "Roy", "635876987", "Acquaintance");

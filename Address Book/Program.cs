@@ -89,7 +89,7 @@ namespace AddressBookProblem
                                 bool dupCheck = a.CheckForDuplicate(c1);
                                 if (dupCheck)
                                 {
-                                    a.addContact(c1);
+                                    a.addContact(c1,name);
                                 }
                                 else
                                 {
@@ -153,7 +153,8 @@ namespace AddressBookProblem
                 md.addNewAddressBook(name, a.getAddBook());
             }
             md.displayAllAddressBook();
-            md.writeAllAddressBook();
+            //md.writeAllAddressBook();
+            md.writeFromDB();
             Console.WriteLine("View by city or state?? 1.Yes\t 2.No");
             int k2 = Convert.ToInt32(Console.ReadLine());
             if (k2 == 1)

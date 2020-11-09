@@ -1,4 +1,5 @@
-﻿using CsvHelper;
+﻿using Address_Book;
+using CsvHelper;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -12,6 +13,7 @@ namespace AddressBookProblem
     class ABook
     {
         List<Contact> aBook = new List<Contact>();
+        AddRepo addRepo = new AddRepo();
 
         public void setAddBook(List<Contact> addBook)
         {
@@ -21,10 +23,11 @@ namespace AddressBookProblem
         {
             return aBook;
         }
-
-        public void addContact(Contact c)
+        public void addContact(Contact c,string name)
         {
             aBook.Add(c);
+            //addRepo.AddToContact_CheckTypeFromAddressDict(c.fName, c.lName, c.pNumber, name);
+            addRepo.AddContact(c,name);
         }
         public void SortByName()
         {
@@ -54,17 +57,19 @@ namespace AddressBookProblem
             }
 
         }
+
+        
         public void writeAll(List<Contact> l)
         {
             foreach (Contact c in l)
             {
                 writeContact(c);
                 writeContactInCSV(c);
-                writeContactInJson();
                 Console.WriteLine("**************");
-
             }
-
+            RestApi rest = new RestApi();
+            rest.AddEmployee(l);
+            //writeContactInJson(l);
         }
 
         public Contact SearchUsingName(string fname, string lname)
@@ -89,12 +94,14 @@ namespace AddressBookProblem
                     Console.WriteLine("Enter the new First name");
                     string fname = Console.ReadLine();
                     c.setFirstName(fname);
+                    addRepo.UpdateAddBook_FirstName(c.cId, c.fName);
                     break;
 
                 case 2:
                     Console.WriteLine("Enter the new Last name");
                     string lname = Console.ReadLine();
                     c.setLastName(lname);
+                    addRepo.UpdateAddBook_FirstName(c.cId, c.lName);
                     break;
 
                 case 3:
@@ -140,52 +147,40 @@ namespace AddressBookProblem
         public void writeContact(Contact c)
         {
             string path = @"C:\Users\priyadarshini roy\source\repos\Address Book\Address Book\ContactsFile.txt";
-            string text = "First Name : " + c.getFirstName() + " Last Name : " + c.getLastName() + "  Address : " + c.getAddress() + "  City : " + c.getCity() + "  State : " + c.getState() + "  Contact No. : " + c.getPhone() + "\n";
+            string text = "First Name : " + c.getFirstName() + " Last Name : " + c.getLastName() + "  Address : " + c.getAddress() + "  City : " + c.getCity() +
+                "  State : " + c.getState() + "  Contact No. : " + c.getPhone() + "\n";
 
-            File.AppendAllText(path, text);
+            File.WriteAllText(path, text);
             Console.WriteLine("Written into file");
         }
-        public void writeContactInCSV(Contact c)
+        public void writeContactInCSV(Contact contact)
         {
             string path = @"C:\Users\priyadarshini roy\source\repos\Address Book\Address Book\ContactsCSV.csv";
-            string csv = string.Format("{0},{1},{2},{3},{4},{5}\n", c.getFirstName(), c.getLastName() , c.getAddress() , c.getCity(), c.getState(), c.getPhone() );
-            File.AppendAllText(path, csv);
+            string csv = string.Format("{0},{1},{2},{3},{4},{5},{6}\n",
+                contact.cId, contact.fName, contact.lName, contact.pNumber, contact.getAddress(), contact.getCity(), contact.getState());
+            File.WriteAllText(path, csv);
             Console.WriteLine("Written into Excel");
         }
-        public void writeContactInJson()
+        public void writeContactInJson(List<Contact> l)
         {
-            string impfp = @"C:\Users\priyadarshini roy\source\repos\Address Book\Address Book\ContactsCSV.csv";
             string expfp = @"C:\Users\priyadarshini roy\source\repos\Address Book\Address Book\ContactsJson.json";
-            //reading csv
-            using (var reader = new StreamReader(impfp))
-            using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
+
+            //writing into json
+            JsonSerializer ser = new JsonSerializer();
+            using (StreamWriter sw = new StreamWriter(expfp))
+            using (JsonWriter jw = new JsonTextWriter(sw))
             {
-                var records = csv.GetRecords<Contact>().ToList();
-                Console.WriteLine("Read data successfully");
-                foreach (Contact ad in records)
+                foreach (Contact c in l)
                 {
-                    Console.Write("\t" + ad.getFirstName());
-                    Console.Write("\t" + ad.getLastName());
-                    Console.Write("\t" + ad.getCity());
-                    Console.Write("\t" + ad.getState());
-                    Console.Write("\t" + ad.getAddress());
-                    Console.Write("\t" + ad.getPhone());
+                    ser.Serialize(jw, c);
                 }
-
-                //writing into json
-                JsonSerializer ser = new JsonSerializer();
-                using (StreamWriter sw = new StreamWriter(expfp))
-                using (JsonWriter jw = new JsonTextWriter(sw))
-                {
-                    ser.Serialize(jw, records);
-                }
-                Console.WriteLine("\nWritten into json file");
-
             }
+            Console.WriteLine("\nWritten into json file");
         }
         public void deleteContact(Contact c)
         {
             aBook.Remove(c);
+            addRepo.DelContact(c.cId);
         }
         public bool CheckForDuplicate(Contact c1)
         {

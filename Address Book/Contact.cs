@@ -6,13 +6,13 @@ namespace AddressBookProblem
 {
     public class Contact
     {
+        public int cId { get; set; }
         public string fName, lName, city, state, address, pNumber;
 
-        public Contact()
-        { 
-        }
+        
         public Contact(string fName, string lName, string city, string state, string address, string pNumber)
         {
+            //this.cId = cId;
             this.fName = fName;
             this.lName = lName;
             this.city = city;
@@ -20,7 +20,9 @@ namespace AddressBookProblem
             this.address = address;
             this.pNumber = pNumber;
         }
-
+        public Contact()
+        {
+        }
         public string getFirstName()
         {
             return this.fName;

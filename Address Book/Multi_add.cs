@@ -37,9 +37,7 @@ namespace AddressBookProblem
                 Console.WriteLine("Address Book Number = {0}", kvp.Key);
                 Console.WriteLine("Address Book Contents are : ");
                 a.writeAll(kvp.Value);
-
             }
-
         }
         public List<Contact> searchByCity(string y)
         {
@@ -89,6 +87,13 @@ namespace AddressBookProblem
         internal int countContactInCity()
         {
             return mdict.Keys.Count;
+        }
+
+        internal void writeFromDB()
+        {
+            AddRepo addRepo = new AddRepo();
+            //a.writeContactInCSV(addRepo.GetAllContacts());
+            a.writeAll(addRepo.GetAllContacts());
         }
     }
 }
