@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "posts": [
     {
       "id": 1,
@@ -16,4 +17,50 @@
   "profile": {
     "name": "typicode"
   }
+=======
+  "Contacts": [
+    {
+      "fName": "frj",
+      "pNumber": "9898789978",
+      "address": "Home",
+      "city": "Home",
+      "id": 1
+    },
+    {
+      "fName": "hbgj",
+      "pNumber": "8987889778",
+      "address": "Home",
+      "city": "Home",
+      "id": 2
+    },
+    {
+      "fName": "frj",
+      "pNumber": "9898789978",
+      "address": "Home",
+      "city": "Home",
+      "id": 3
+    },
+    {
+      "fName": "hbgj",
+      "pNumber": "8987889778",
+      "address": "Home",
+      "city": "Home",
+      "id": 4
+    },
+    {
+      "fName": "jfvn",
+      "pNumber": "8790878909",
+      "address": "jk",
+      "city": "kj",
+      "id": 5
+    },
+    {
+      "fName": "",
+      "pNumber": "9897798988",
+      "address": "uhjdf",
+      "city": "uhj",
+      "id": 6
+    }
+  ]
+>>>>>>> uc27-integrateAll
 }

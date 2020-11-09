@@ -1,12 +1,22 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "ZMuU2D97J67XhGcYObT/xI7MIpUh+cCQrvuTljK+nlEkpNpoy1kgmXeZpIGfvsGzYnP+oEff/SxRLUscpNtk6g==",
+=======
+  "dgSpecHash": "xCl41wm4hpNBH60IKzfC2l2cB8jEbVqRgZjgxiTeWqhcYmiUUTSuMksS0OM5fcpxaHon/s6S20/y4bGfC2qXcw==",
+>>>>>>> uc27-integrateAll
   "success": true,
   "projectFilePath": "C:\\Users\\priyadarshini roy\\source\\repos\\Address Book\\UnitTestProject1\\UnitTestProject1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\priyadarshini roy\\.nuget\\packages\\coverlet.collector\\1.2.0\\coverlet.collector.1.2.0.nupkg.sha512",
+<<<<<<< HEAD
     "C:\\Users\\priyadarshini roy\\.nuget\\packages\\microsoft.codecoverage\\16.5.0\\microsoft.codecoverage.16.5.0.nupkg.sha512",
     "C:\\Users\\priyadarshini roy\\.nuget\\packages\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",
+=======
+    "C:\\Users\\priyadarshini roy\\.nuget\\packages\\csvhelper\\15.0.8\\csvhelper.15.0.8.nupkg.sha512",
+    "C:\\Users\\priyadarshini roy\\.nuget\\packages\\microsoft.codecoverage\\16.5.0\\microsoft.codecoverage.16.5.0.nupkg.sha512",
+    "C:\\Users\\priyadarshini roy\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+>>>>>>> uc27-integrateAll
     "C:\\Users\\priyadarshini roy\\.nuget\\packages\\microsoft.net.test.sdk\\16.5.0\\microsoft.net.test.sdk.16.5.0.nupkg.sha512",
     "C:\\Users\\priyadarshini roy\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\priyadarshini roy\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
@@ -17,8 +27,14 @@
     "C:\\Users\\priyadarshini roy\\.nuget\\packages\\mstest.testadapter\\2.1.0\\mstest.testadapter.2.1.0.nupkg.sha512",
     "C:\\Users\\priyadarshini roy\\.nuget\\packages\\mstest.testframework\\2.1.0\\mstest.testframework.2.1.0.nupkg.sha512",
     "C:\\Users\\priyadarshini roy\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
+<<<<<<< HEAD
     "C:\\Users\\priyadarshini roy\\.nuget\\packages\\newtonsoft.json\\9.0.1\\newtonsoft.json.9.0.1.nupkg.sha512",
     "C:\\Users\\priyadarshini roy\\.nuget\\packages\\nuget.frameworks\\5.0.0\\nuget.frameworks.5.0.0.nupkg.sha512",
+=======
+    "C:\\Users\\priyadarshini roy\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\priyadarshini roy\\.nuget\\packages\\nuget.frameworks\\5.0.0\\nuget.frameworks.5.0.0.nupkg.sha512",
+    "C:\\Users\\priyadarshini roy\\.nuget\\packages\\restsharp\\106.11.7\\restsharp.106.11.7.nupkg.sha512",
+>>>>>>> uc27-integrateAll
     "C:\\Users\\priyadarshini roy\\.nuget\\packages\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\priyadarshini roy\\.nuget\\packages\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\priyadarshini roy\\.nuget\\packages\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
@@ -51,7 +67,10 @@
     "C:\\Users\\priyadarshini roy\\.nuget\\packages\\system.diagnostics.tools\\4.3.0\\system.diagnostics.tools.4.3.0.nupkg.sha512",
     "C:\\Users\\priyadarshini roy\\.nuget\\packages\\system.diagnostics.tracesource\\4.3.0\\system.diagnostics.tracesource.4.3.0.nupkg.sha512",
     "C:\\Users\\priyadarshini roy\\.nuget\\packages\\system.diagnostics.tracing\\4.3.0\\system.diagnostics.tracing.4.3.0.nupkg.sha512",
+<<<<<<< HEAD
     "C:\\Users\\priyadarshini roy\\.nuget\\packages\\system.dynamic.runtime\\4.0.11\\system.dynamic.runtime.4.0.11.nupkg.sha512",
+=======
+>>>>>>> uc27-integrateAll
     "C:\\Users\\priyadarshini roy\\.nuget\\packages\\system.globalization\\4.3.0\\system.globalization.4.3.0.nupkg.sha512",
     "C:\\Users\\priyadarshini roy\\.nuget\\packages\\system.globalization.calendars\\4.3.0\\system.globalization.calendars.4.3.0.nupkg.sha512",
     "C:\\Users\\priyadarshini roy\\.nuget\\packages\\system.globalization.extensions\\4.3.0\\system.globalization.extensions.4.3.0.nupkg.sha512",
@@ -80,7 +99,10 @@
     "C:\\Users\\priyadarshini roy\\.nuget\\packages\\system.runtime.interopservices\\4.3.0\\system.runtime.interopservices.4.3.0.nupkg.sha512",
     "C:\\Users\\priyadarshini roy\\.nuget\\packages\\system.runtime.interopservices.runtimeinformation\\4.3.0\\system.runtime.interopservices.runtimeinformation.4.3.0.nupkg.sha512",
     "C:\\Users\\priyadarshini roy\\.nuget\\packages\\system.runtime.numerics\\4.3.0\\system.runtime.numerics.4.3.0.nupkg.sha512",
+<<<<<<< HEAD
     "C:\\Users\\priyadarshini roy\\.nuget\\packages\\system.runtime.serialization.primitives\\4.1.1\\system.runtime.serialization.primitives.4.1.1.nupkg.sha512",
+=======
+>>>>>>> uc27-integrateAll
     "C:\\Users\\priyadarshini roy\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
     "C:\\Users\\priyadarshini roy\\.nuget\\packages\\system.security.cryptography.algorithms\\4.3.0\\system.security.cryptography.algorithms.4.3.0.nupkg.sha512",
     "C:\\Users\\priyadarshini roy\\.nuget\\packages\\system.security.cryptography.cng\\4.3.0\\system.security.cryptography.cng.4.3.0.nupkg.sha512",

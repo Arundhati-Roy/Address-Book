@@ -37,6 +37,31 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+<<<<<<< HEAD
+=======
+          "dependencies": {
+            "CsvHelper": {
+              "target": "Package",
+              "version": "[15.0.8, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[106.11.7, )"
+            },
+            "System.Collections": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.2, )"
+            }
+          },
+>>>>>>> uc27-integrateAll
           "imports": [
             "net461",
             "net462",

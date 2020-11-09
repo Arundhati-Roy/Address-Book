@@ -8,6 +8,21 @@
           "build/netstandard1.0/coverlet.collector.targets": {}
         }
       },
+<<<<<<< HEAD
+=======
+      "CsvHelper/15.0.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CSharp": "4.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.1/CsvHelper.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/CsvHelper.dll": {}
+        }
+      },
+>>>>>>> uc27-integrateAll
       "Microsoft.CodeCoverage/16.5.0": {
         "type": "package",
         "compile": {
@@ -21,6 +36,7 @@
           "build/netstandard1.0/Microsoft.CodeCoverage.targets": {}
         }
       },
+<<<<<<< HEAD
       "Microsoft.CSharp/4.0.1": {
         "type": "package",
         "dependencies": {
@@ -46,6 +62,15 @@
         },
         "runtime": {
           "lib/netstandard1.3/Microsoft.CSharp.dll": {}
+=======
+      "Microsoft.CSharp/4.5.0": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/_._": {}
+>>>>>>> uc27-integrateAll
         }
       },
       "Microsoft.NET.Test.Sdk/16.5.0": {
@@ -423,6 +448,7 @@
           "System.Xml.XDocument": "4.3.0"
         }
       },
+<<<<<<< HEAD
       "Newtonsoft.Json/9.0.1": {
         "type": "package",
         "dependencies": {
@@ -454,6 +480,15 @@
         },
         "runtime": {
           "lib/netstandard1.0/Newtonsoft.Json.dll": {}
+=======
+      "Newtonsoft.Json/12.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+>>>>>>> uc27-integrateAll
         }
       },
       "NuGet.Frameworks/5.0.0": {
@@ -465,6 +500,18 @@
           "lib/netstandard2.0/NuGet.Frameworks.dll": {}
         }
       },
+<<<<<<< HEAD
+=======
+      "RestSharp/106.11.7": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/RestSharp.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/RestSharp.dll": {}
+        }
+      },
+>>>>>>> uc27-integrateAll
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
         "type": "package",
         "runtimeTargets": {
@@ -861,6 +908,7 @@
           "ref/netstandard1.5/System.Diagnostics.Tracing.dll": {}
         }
       },
+<<<<<<< HEAD
       "System.Dynamic.Runtime/4.0.11": {
         "type": "package",
         "dependencies": {
@@ -887,6 +935,8 @@
           "lib/netstandard1.3/System.Dynamic.Runtime.dll": {}
         }
       },
+=======
+>>>>>>> uc27-integrateAll
       "System.Globalization/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -1354,6 +1404,7 @@
           "lib/netstandard1.3/System.Runtime.Numerics.dll": {}
         }
       },
+<<<<<<< HEAD
       "System.Runtime.Serialization.Primitives/4.1.1": {
         "type": "package",
         "dependencies": {
@@ -1367,6 +1418,8 @@
           "lib/netstandard1.3/System.Runtime.Serialization.Primitives.dll": {}
         }
       },
+=======
+>>>>>>> uc27-integrateAll
       "System.Security.AccessControl/4.7.0": {
         "type": "package",
         "dependencies": {
@@ -1758,6 +1811,16 @@
       "Address Book/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
+<<<<<<< HEAD
+=======
+        "dependencies": {
+          "CsvHelper": "15.0.8",
+          "Newtonsoft.Json": "12.0.3",
+          "RestSharp": "106.11.7",
+          "System.Collections": "4.3.0",
+          "System.Data.SqlClient": "4.8.2"
+        },
+>>>>>>> uc27-integrateAll
         "compile": {
           "bin/placeholder/Address Book.dll": {}
         },
@@ -1799,6 +1862,29 @@
         "coverlet.collector.nuspec"
       ]
     },
+<<<<<<< HEAD
+=======
+    "CsvHelper/15.0.8": {
+      "sha512": "S/EOFs0QiyX1auRZET2lqyXLheSzVYbqn6PkMBOHi28qMepDqI+5FXDb9plYU8kMB2jIADOp+zuBKn+OX6N3Uw==",
+      "type": "package",
+      "path": "csvhelper/15.0.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "csvhelper.15.0.8.nupkg.sha512",
+        "csvhelper.nuspec",
+        "lib/net45/CsvHelper.dll",
+        "lib/net45/CsvHelper.xml",
+        "lib/net47/CsvHelper.dll",
+        "lib/net47/CsvHelper.xml",
+        "lib/netstandard2.0/CsvHelper.dll",
+        "lib/netstandard2.0/CsvHelper.xml",
+        "lib/netstandard2.1/CsvHelper.dll",
+        "lib/netstandard2.1/CsvHelper.xml"
+      ]
+    },
+>>>>>>> uc27-integrateAll
     "Microsoft.CodeCoverage/16.5.0": {
       "sha512": "PM5YLtyN45EyUGePJpaNogndlaQPrMgQQXHKMhMESC6KfSVvt+j7+dxBi8NYC6X6dZVysf7ngwhSW3wwvPJRSQ==",
       "type": "package",
@@ -1835,6 +1921,7 @@
         "microsoft.codecoverage.nuspec"
       ]
     },
+<<<<<<< HEAD
     "Microsoft.CSharp/4.0.1": {
       "sha512": "17h8b5mXa87XYKrrVqdgZ38JefSUqLChUQpXgSnpzsM0nDOhE40FTeNWOJ/YmySGV6tG6T8+hjz6vxbknHJr6A==",
       "type": "package",
@@ -1844,12 +1931,31 @@
         ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
+=======
+    "Microsoft.CSharp/4.5.0": {
+      "sha512": "kaj6Wb4qoMuH3HySFJhxwQfe8R/sJsNJnANrvv8WdFPMoNbKY5htfNscv+LHCu5ipz+49m2e+WQXpLXr9XYemQ==",
+      "type": "package",
+      "path": "microsoft.csharp/4.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+>>>>>>> uc27-integrateAll
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net45/_._",
         "lib/netcore50/Microsoft.CSharp.dll",
+<<<<<<< HEAD
         "lib/netstandard1.3/Microsoft.CSharp.dll",
         "lib/portable-net45+win8+wp8+wpa81/_._",
+=======
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.3/Microsoft.CSharp.dll",
+        "lib/netstandard2.0/Microsoft.CSharp.dll",
+        "lib/portable-net45+win8+wp8+wpa81/_._",
+        "lib/uap10.0.16299/_._",
+>>>>>>> uc27-integrateAll
         "lib/win8/_._",
         "lib/wp80/_._",
         "lib/wpa81/_._",
@@ -1857,7 +1963,11 @@
         "lib/xamarinmac20/_._",
         "lib/xamarintvos10/_._",
         "lib/xamarinwatchos10/_._",
+<<<<<<< HEAD
         "microsoft.csharp.4.0.1.nupkg.sha512",
+=======
+        "microsoft.csharp.4.5.0.nupkg.sha512",
+>>>>>>> uc27-integrateAll
         "microsoft.csharp.nuspec",
         "ref/MonoAndroid10/_._",
         "ref/MonoTouch10/_._",
@@ -1873,6 +1983,10 @@
         "ref/netcore50/ru/Microsoft.CSharp.xml",
         "ref/netcore50/zh-hans/Microsoft.CSharp.xml",
         "ref/netcore50/zh-hant/Microsoft.CSharp.xml",
+<<<<<<< HEAD
+=======
+        "ref/netcoreapp2.0/_._",
+>>>>>>> uc27-integrateAll
         "ref/netstandard1.0/Microsoft.CSharp.dll",
         "ref/netstandard1.0/Microsoft.CSharp.xml",
         "ref/netstandard1.0/de/Microsoft.CSharp.xml",
@@ -1884,14 +1998,27 @@
         "ref/netstandard1.0/ru/Microsoft.CSharp.xml",
         "ref/netstandard1.0/zh-hans/Microsoft.CSharp.xml",
         "ref/netstandard1.0/zh-hant/Microsoft.CSharp.xml",
+<<<<<<< HEAD
         "ref/portable-net45+win8+wp8+wpa81/_._",
+=======
+        "ref/netstandard2.0/Microsoft.CSharp.dll",
+        "ref/netstandard2.0/Microsoft.CSharp.xml",
+        "ref/portable-net45+win8+wp8+wpa81/_._",
+        "ref/uap10.0.16299/_._",
+>>>>>>> uc27-integrateAll
         "ref/win8/_._",
         "ref/wp80/_._",
         "ref/wpa81/_._",
         "ref/xamarinios10/_._",
         "ref/xamarinmac20/_._",
         "ref/xamarintvos10/_._",
+<<<<<<< HEAD
         "ref/xamarinwatchos10/_._"
+=======
+        "ref/xamarinwatchos10/_._",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+>>>>>>> uc27-integrateAll
       ]
     },
     "Microsoft.NET.Test.Sdk/16.5.0": {
@@ -2429,6 +2556,7 @@
         "netstandard.library.nuspec"
       ]
     },
+<<<<<<< HEAD
     "Newtonsoft.Json/9.0.1": {
       "sha512": "U82mHQSKaIk+lpSVCbWYKNavmNH1i5xrExDEquU1i6I5pV6UMOqRnJRSlKO3cMPfcpp0RgDY+8jUXHdQ4IfXvw==",
       "type": "package",
@@ -2437,6 +2565,16 @@
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+=======
+    "Newtonsoft.Json/12.0.3": {
+      "sha512": "6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
+      "type": "package",
+      "path": "newtonsoft.json/12.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+>>>>>>> uc27-integrateAll
         "lib/net20/Newtonsoft.Json.dll",
         "lib/net20/Newtonsoft.Json.xml",
         "lib/net35/Newtonsoft.Json.dll",
@@ -2447,6 +2585,7 @@
         "lib/net45/Newtonsoft.Json.xml",
         "lib/netstandard1.0/Newtonsoft.Json.dll",
         "lib/netstandard1.0/Newtonsoft.Json.xml",
+<<<<<<< HEAD
         "lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.dll",
         "lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.xml",
         "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll",
@@ -2454,6 +2593,19 @@
         "newtonsoft.json.9.0.1.nupkg.sha512",
         "newtonsoft.json.nuspec",
         "tools/install.ps1"
+=======
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "newtonsoft.json.12.0.3.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
+>>>>>>> uc27-integrateAll
       ]
     },
     "NuGet.Frameworks/5.0.0": {
@@ -2473,6 +2625,25 @@
         "nuget.frameworks.nuspec"
       ]
     },
+<<<<<<< HEAD
+=======
+    "RestSharp/106.11.7": {
+      "sha512": "NzndH096CTulvq+ihr7u1mBJ29oukdi9A8bypQJk+kaHxbRzTTrtgsEEQAb04ptTUZmQa7cgo7uF5z7NuEPX1Q==",
+      "type": "package",
+      "path": "restsharp/106.11.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net452/RestSharp.dll",
+        "lib/net452/RestSharp.xml",
+        "lib/netstandard2.0/RestSharp.dll",
+        "lib/netstandard2.0/RestSharp.xml",
+        "restsharp.106.11.7.nupkg.sha512",
+        "restsharp.nuspec",
+        "restsharp.png"
+      ]
+    },
+>>>>>>> uc27-integrateAll
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
       "sha512": "HdSSp5MnJSsg08KMfZThpuLPJpPwE5hBXvHwoKWosyHHfe8Mh5WKT0ylEOf6yNzX6Ngjxe4Whkafh5q7Ymac4Q==",
       "type": "package",
@@ -3406,6 +3577,7 @@
         "system.diagnostics.tracing.nuspec"
       ]
     },
+<<<<<<< HEAD
     "System.Dynamic.Runtime/4.0.11": {
       "sha512": "db34f6LHYM0U0JpE+sOmjar27BnqTVkbLJhgfwMpTdgTigG/Hna3m2MYVwnFzGGKnEJk2UXFuoVTr8WUbU91/A==",
       "type": "package",
@@ -3477,6 +3649,8 @@
         "system.dynamic.runtime.nuspec"
       ]
     },
+=======
+>>>>>>> uc27-integrateAll
     "System.Globalization/4.3.0": {
       "sha512": "kYdVd2f2PAdFGblzFswE4hkNANJBKRmsfa2X5LG2AcWE1c7/4t0pYae1L8vfZ5xvE2nK/R9JprtToA61OSHWIg==",
       "type": "package",
@@ -5145,6 +5319,7 @@
         "system.runtime.numerics.nuspec"
       ]
     },
+<<<<<<< HEAD
     "System.Runtime.Serialization.Primitives/4.1.1": {
       "sha512": "HZ6Du5QrTG8MNJbf4e4qMO3JRAkIboGT5Fk804uZtg3Gq516S7hAqTm2UZKUHa7/6HUGdVy3AqMQKbns06G/cg==",
       "type": "package",
@@ -5218,6 +5393,8 @@
         "system.runtime.serialization.primitives.nuspec"
       ]
     },
+=======
+>>>>>>> uc27-integrateAll
     "System.Security.AccessControl/4.7.0": {
       "sha512": "JECvTt5aFF3WT3gHpfofL2MNNP6v84sxtXxpqhLBCcDRzqsPBmHhQ6shv4DwwN2tRlzsUxtb3G9M3763rbXKDg==",
       "type": "package",
